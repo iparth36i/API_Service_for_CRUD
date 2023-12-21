@@ -82,28 +82,28 @@
 {% if user.is_authenticated %}
     <div class="container">
         <div class="header">Add Box</div>
-        <a href="#" class="button">Url :- <b>/add/</b></a>
+        <a href="{% url 'box-add' %}" class="button">Click here to go to Add API</a>
     </div>
     <div class="container">
         <div class="header">Update Box</div>
-        <a href="#" class="button">Url :- <b>update/id/</b></a>
+        <a href="#" class="button" style="background-color:red;pointer-events: none;">To update Box go to /update/box_id</a>
     </div>
     <div class="container">
         <div class="header">List of all Boxs</div>
-        <a href="#" class="button">Url :- <b>/list/</b></a>
+        <a href="{% url 'box-list' %}" class="button">Click here to go to List all boxes API</a>
     </div>
     <div class="container">
         <div class="header">List my Boxes</div>
-        <a href="#" class="button">Url :- <b>/my-boxes/</b></a>
+        <a href="{% url 'my-box-list' %}" class="button">Click here to go to List My boxes API</a>
     </div>
     <div class="container">
         <div class="header">Delete my Box</div>
-        <a href="#" class="button">Url :- <b>/delete/id/</b></a>
+        <a href="#" class="button" style="background-color:red;pointer-events: none;">To Delete Box go to /delete/box_id</a>
     </div>
 
 {% else %}
 <div class="container" style="height: 50vh; display: flex; align-items: center; justify-content: center;">
-    <div class="header" style="padding: 20vh;"><b><u>Login First</u></b></div>
+    <div class="header" style="padding: 20vh;"><a href="{% url 'login' %}"><b><u>Login First</u></b></a></div>
 </div>
 
 {% endif %}
